@@ -17,8 +17,10 @@ function App() {
                 <Nav pages={pages} current={currentPage} setPage={setPage}/>
             </Header>
             <Page current={currentPage}>
+            
             </Page>
             <Footer/>
+            
         </>
     );
 }

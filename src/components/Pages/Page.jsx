@@ -16,14 +16,9 @@ export default function Page({current, children}) {
         }
     }
   return (
-    <div className='h-full flex flex-col justify-between p-2'>
-        <div>
-            <h2 className='text-2xl m-4'>{capitalizeFirstLetter(current)}</h2>
-            <div className='h-full m-4'>
-                {renderPage()}
-            </div>
-        </div>
-        {children}
+    <div  id="pageContainer" className='grow flex flex-col min-w-100% bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-900 to-neutral-900 p-4 rounded-2xl bg-opacity-75 my-4'>
+        <h2 className='text-2xl my-4 mx-2 '>{capitalizeFirstLetter(current)}</h2>
+        {renderPage()}
     </div>
   )
 }
