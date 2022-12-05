@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='page flex flex-col justify-between md:flex-row'>
+    <div className='page flex flex-col-reverse reverse justify-between md:flex-row'>
 
-        <div>
+        <div className='flex-wrap bg-neutral-900 bg-opacity-40 md:p-2 h-fit rounded-xl border border-neutral-700'>
           <p>
             I am extremely facinated by software development. I have a non-traditional entry into the field. After years of hobby projects
             and self-teaching, I came to realize that this is what I love doing. I found myself hooked on problem solving and development, 
@@ -30,7 +30,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className='icons flex justify-center md:items-start md:min-w-[175px] flex-wrap md:ml-4 bg-black bg-opacity-40 md:p-2 h-fit rounded-xl border border-neutral-500'>
+        <div className='icons flex justify-center md:items-start md:min-w-[175px] flex-wrap md:ml-4 bg-neutral-900 bg-opacity-40 md:p-2 h-fit rounded-xl border border-neutral-700 mb-4'>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"width="50" height="50" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" width="50" height="50"/>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" height="50"/>

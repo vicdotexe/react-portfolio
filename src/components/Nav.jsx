@@ -1,16 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../utils/helpers'
+import { useLocation } from 'react-router-dom';
 
 export default function Nav(props) {
-    const {setPage, pages, current} = props;
+    const location = useLocation();
+
     function getUnique(page){
+
+        let current = location.pathname;
         let color = page == current ? "text-sky-500" : "text-white";
         let hoverColor = page == current ? "" : "hover:text-white";
-        return `${color} ${hoverColor}`
+        return `${color} ${hoverColor}` + ' mx-4 whitespace-nowrap'
     }
   return (
     <div className='self-center flex'>
-        {pages.map((page,i)=>{
+        {/* {pages.map((page,i)=>{
             return <a 
             href={`#${page}`} 
             key={i} 
@@ -18,7 +23,11 @@ export default function Nav(props) {
             onClick={()=>setPage(page)}>
                 {capitalizeFirstLetter(page)}
             </a>
-        })}
+        })} */}
+        <Link to="/" className={`${getUnique('/')}`}>About Me</Link>
+        <Link to="/portfolio" className={`${getUnique('/portfolio')}`} >Portfolio</Link>
+        <Link to="/contact" className={`${getUnique('/contact')}`}>Contact</Link>
+        <Link to="/resume" className={`${getUnique('/resume')}`}>Resume</Link>
     </div>
   )
 }

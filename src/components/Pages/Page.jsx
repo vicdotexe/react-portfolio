@@ -16,7 +16,7 @@ export default function Page({current, children}) {
         }
     }
   return (
-    <div  id="pageContainer" className='grow flex flex-col min-w-100% bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800 via-neutral-900 to-neutral-900 p-4 rounded-2xl bg-opacity-75 my-4'>
+    <div  id="pageContainer" className='grow flex flex-col min-w-100% bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-neutral-800/75 via-neutral-900/75 to-neutral-900/75 p-4 rounded-2xl bg-opacity-75 my-4'>
         <h2 className='text-2xl my-4 mx-2 '>{capitalizeFirstLetter(current)}</h2>
         {renderPage()}
     </div>
