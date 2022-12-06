@@ -6,7 +6,7 @@ My portfolio website created with React.js
 ## Deployed
 [Deployed Website](https://victor-react-portfolio.netlify.app)
 
-![a screenshot of the homepage](./src/assets/screenshot.PNG)
+![a screenshot of the homepage](./src/assets/screenshot.png)
 ## License
 Project is under the [MIT License](http://choosealicense.com/licenses/mit/). See the link for more details.
 
