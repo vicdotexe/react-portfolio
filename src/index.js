@@ -5,7 +5,7 @@ import './index.css';
 import Background from './assets/background.png';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.getElementById('root').className = "p-2 md:p-8";
+document.getElementById('root').className = "p-2 md:px-20";
 document.querySelector('body').style=`background-image: url(${Background}`
 root.render(
     <App />

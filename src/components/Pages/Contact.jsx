@@ -11,19 +11,58 @@ export default function Contact() {
 
   const onSubmit = (e)=>{
     e.preventDefault();
-    if (!name){
-      showModal("Please include your name.");
-    }else if (!email){
-      showModal("Please include your email.");
-    }else if (!emailReg.test(email)){
-      showModal("Invalid email address.");
-    }else if (!message){
-      showModal("Please include a message.")
+
+    if (!name || !email || !emailReg.test(email) || !message){
+      showModal("Please include your name, a valid e-address, and a message.");
     }else{
       showModal("Message sent! Thank you for your interest!")
       setName('');
       setEmail('');
       setMessage('');
+    }
+
+    const nameRequired = document.querySelector("#nameRequired");
+    const emailRequired = document.querySelector("#emailRequired");
+    const messageRequired = document.querySelector("#messageRequired");
+
+    if (!name){
+      nameRequired.classList.remove("hidden");
+    }
+    if (!email || !emailReg.test(email)){
+      emailRequired.classList.remove("hidden");
+    }
+    if (!message){
+      messageRequired.classList.remove("hidden");
+    }
+  }
+
+  const onSetName = (name)=>{
+    const nameRequired = document.querySelector("#nameRequired");
+    setName(name);
+    if (!name){
+      nameRequired.classList.remove("hidden");
+    }else{
+      nameRequired.classList.add("hidden");
+    }
+  }
+
+  const onSetEmail = (email)=>{
+    const emailRequired = document.querySelector("#emailRequired");
+    setEmail(email);
+    if (!email || !emailReg.test(email)){
+      emailRequired.classList.remove("hidden");
+    }else{
+      emailRequired.classList.add("hidden");
+    }
+  }
+
+  const onSetMessage = (message) => {
+    const messageRequired = document.querySelector("#messageRequired");
+    setMessage(message);
+    if (!message){
+      messageRequired.classList.remove("hidden");
+    }else{
+      messageRequired.classList.add("hidden");
     }
   }
 
@@ -37,26 +76,26 @@ export default function Contact() {
   }
 
   return (
-    <form className='flex flex-col rounded-xl border border-neutral-800 p-2.5 bg-black bg-opacity-20' onSubmit={onSubmit}>
+    <form className='flex flex-col rounded-lg border border-neutral-800 p-2.5 bg-black bg-opacity-20' onSubmit={onSubmit}>
 
       <div className='my-4'>
-        <label htmlFor="name" className="block mb-2 text-sm font-medium">Your Name</label>
-        <input type="text" id="name" value={name} onChange={(e)=>setName(e.target.value)} className="bg-neutral-700 border border-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5" placeholder="name"/>
+        <label htmlFor="name" className="block mb-2 text-sm font-medium">Your Name <span className='text-red-400 hidden' id="nameRequired">(Name is required)</span></label>
+        <input type="text" id="name" value={name} onChange={(e)=>onSetName(e.target.value)} className="bg-neutral-700 border border-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5" placeholder="name"/>
       </div>
 
       <div className='my-4'>
-        <label htmlFor="email-address" className="block mb-2 text-sm font-medium">Your Email</label>
+        <label htmlFor="email-address" className="block mb-2 text-sm font-medium">Your Email <span className='text-red-400 hidden' id="emailRequired">(Invalid e-mail address)</span></label>
         <div className="relative">
           <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
             <svg aria-hidden="true" className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
           </div>
-          <input type="text" id="email-address" value={email} onChange={(e)=>setEmail(e.target.value)} className="bg-neutral-700 border border-gray-500  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 pl-10 p-2.5" placeholder="name@email.com"/>
+          <input type="text" id="email-address" value={email} onChange={(e)=>onSetEmail(e.target.value)} className="bg-neutral-700 border border-gray-500  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 pl-10 p-2.5" placeholder="name@email.com"/>
         </div>
       </div>
      
       <div className='my-4'>
-        <label htmlFor="message" className="block mb-2 text-sm font-medium">Your Message</label>
-        <textarea id="message" rows="6" value={message} onChange={(e)=>setMessage(e.target.value)} className="block p-2.5 w-full text-sm bg-neutral-700 rounded-lg border border-gray-500 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a message..."></textarea>
+        <label htmlFor="message" className="block mb-2 text-sm font-medium">Your Message <span className='text-red-400 hidden' id="messageRequired">(Must include a message)</span></label>
+        <textarea id="message" rows="6" value={message} onChange={(e)=>onSetMessage(e.target.value)} className="block p-2.5 w-full text-sm bg-neutral-700 rounded-lg border border-gray-500 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a message..."></textarea>
       </div>
     
       <button type="submit" className="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
