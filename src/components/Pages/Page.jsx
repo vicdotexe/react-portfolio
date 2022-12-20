@@ -4,6 +4,7 @@ import Resume from "./Resume";
 import Contact from "./Contact";
 import About from './About';
 import { capitalizeFirstLetter } from '../../utils/helpers';
+import Tutorials from './Tutorials';
 
 export default function Page({current, children}) {
     function renderPage(){
@@ -12,6 +13,7 @@ export default function Page({current, children}) {
             case "portfolio": return <Portfolio/>
             case "contact": return <Contact/>
             case "resume": return <Resume/>
+            case "tutorials": return <Tutorials/>
             default: return <h1>That page doesn't exist.</h1>
         }
     }
