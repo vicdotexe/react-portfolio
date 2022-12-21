@@ -6,16 +6,16 @@ export default function About() {
 
         <div className='flex-wrap bg-neutral-900 bg-opacity-40 md:p-2 h-fit rounded-lg border border-neutral-800 bg-black bg-opacity-20'>
           <p>
-            I am extremely facinated by software development. I have a non-traditional entry into the field. After years of hobby projects
+            I am extremely fascinated by software development. I have a non-traditional entry into the field. After years of hobby projects
             and self-teaching, I came to realize that this is what I love doing. I found myself hooked on problem solving and development, 
-            more interested in browsing StackOverflow than the usual hobbies of tv/movies, games, and sports. This epiphany lead me to persue 
-            a career in the field, hoping of letting my interests and skills become both utilized and valued. 
+            more interested in browsing StackOverflow than the usual hobbies of tv/movies, games, and sports. This epiphany led me to pursue 
+            a career in the field, hoping to let my interests and skills become both utilized and valued. 
           </p>
           <p>
             My journey started in C#, learning lower-level game development (Monogame/XNA) outside the confines of a game-engine, re-inventing every wheel that I could to understand how things worked.
             Over time, I became more and more versed in the language of C#, and my interests grew beyond game development, into small native applications
             using Xamarin. Laying things out, styling, utilizing APIs, it opened my eyes to the vast variety of different kinds of development. This is when I decided that I want to do this for a career. Being a father and provider, I don't get enough time 
-            in the day to emerse myself in development on top of family and a job, so how great would it be to have a career that quenches my thirst for development?
+            in the day to immerse myself in development on top of family and a job, so how great would it be to have a career that quenches my thirst for development?
           </p>
               
           <p>
@@ -26,7 +26,7 @@ export default function About() {
           </p>
 
           <p>
-            I want to share my skills and passion for growth with an entity that is willing give me an opportunity to shine, and prove that I'm just as qualified or more than someone with a degree.
+            I want to share my skills and passion for growth with an entity that is willing to give me an opportunity to shine, and prove that I'm just as qualified as someone with a degree.
           </p>
         </div>
 
