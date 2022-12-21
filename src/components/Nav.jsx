@@ -28,7 +28,7 @@ export default function Nav(props) {
         <Link to="/portfolio" className={`${getUnique('/portfolio')}`} >Portfolio</Link>
         <Link to="/contact" className={`${getUnique('/contact')}`}>Contact</Link>
         <Link to="/resume" className={`${getUnique('/resume')}`}>Resume</Link>
-        <Link to="/tutorials" className={`${getUnique('/tutorials')}`}>Tutorials</Link>
+        {/* <Link to="/tutorials" className={`${getUnique('/tutorials')}`}>Tutorials</Link> */}
     </div>
   )
 }

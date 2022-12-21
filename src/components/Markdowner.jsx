@@ -10,6 +10,7 @@ export default function Markdowner({markdown}) {
         <ReactMarkdown
     children={markdown}
     remarkPlugins={[remarkGfm]}
+    escapeHtml={false}
     components={{
       code({node, inline, className, children, ...props}) {
         const match = /language-(\w+)/.exec(className || '')
