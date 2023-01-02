@@ -4,6 +4,7 @@ import LyricalLetho from '../assets/lyrical-letho.png';
 import WeatherDashboard from '../assets/weather-dashboard.png';
 import TechBlog from '../assets/tech-blog.png';
 import CSSCheatSheet from '../assets/css-cheat-sheet.PNG'
+import Gridlocke from '../assets/gridlocke.gif'
 
 export default {
     Renegade,
@@ -11,5 +12,6 @@ export default {
     LyricalLetho,
     WeatherDashboard,
     TechBlog,
-    CSSCheatSheet
+    CSSCheatSheet,
+    Gridlocke
 }

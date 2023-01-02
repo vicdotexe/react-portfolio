@@ -4,12 +4,18 @@ import Images from '../../assets'
 
 export default function Portfolio() {
   const projects = [
-    
+    {
+      title:"Gridlocke",
+      description:"description",
+      link:"https://www.gridlocke.net",
+      repo:"https://github.com/neft-tk/fatal-forge",
+      image:Images.Gridlocke
+    },
     {
       title:"Renegade Art",
       description:"description",
       link:"https://renegade-art.herokuapp.com",
-      repo:"",
+      repo:"https://github.com/vicdotexe/renegade-art",
       image:Images.Renegade
     },{
       title:"Lyrical Letho",

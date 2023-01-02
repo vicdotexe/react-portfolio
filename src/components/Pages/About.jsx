@@ -26,7 +26,7 @@ export default function About() {
           </p>
 
           <p>
-            I want to share my skills and passion for growth with an entity that is willing to give me an opportunity to shine, and prove that I'm just as qualified as someone with a degree.
+          I want to share my skills and passion for growth with an entity that will give me a chance to shine, one which invests in my potential by providing a holistic work environment with star-reaching goals.
           </p>
         </div>
 
