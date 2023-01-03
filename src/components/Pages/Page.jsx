@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import About from './About';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import Tutorials from './Tutorials';
+import Tutorial from './Tutorial';
 
 export default function Page({current, children}) {
     function renderPage(){
@@ -14,6 +15,7 @@ export default function Page({current, children}) {
             case "contact": return <Contact/>
             case "resume": return <Resume/>
             case "tutorials": return <Tutorials/>
+            case "tutorial" : return <Tutorial/>
             default: return <h1>That page doesn't exist.</h1>
         }
     }

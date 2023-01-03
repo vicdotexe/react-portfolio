@@ -41,6 +41,7 @@ function App() {
                     <Route path="/contact" element={<Page current="contact"/>}/>
                     <Route path="/resume" element={<Page current="resume"/>}/>
                     <Route path="/tutorials" element={<Page current="tutorials"/>}/>
+                    <Route path="/tutorial" element={<Page current="tutorial"/>}/>
                 </Routes>
             </Router>
             <Footer/>

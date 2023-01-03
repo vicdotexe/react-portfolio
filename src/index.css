@@ -28,7 +28,10 @@
     @apply border;
   }
   ul{
-    @apply ml-2 list-disc list-inside;
+    @apply ml-2 list-inside;
+  }
+  li{
+    @apply my-2 bg-black/25 p-2 rounded
   }
 }
 

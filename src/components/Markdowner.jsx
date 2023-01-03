@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm'
 
 export default function Markdowner({markdown}) {
   return (
-    <div className='grow shrink'>
+    <div className='w-full h-full'>
         <ReactMarkdown
     children={markdown}
     remarkPlugins={[remarkGfm]}
