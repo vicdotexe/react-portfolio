@@ -1,10 +1,23 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import Markdowner from '../Markdowner'
+import md from '../../utils/github-markdown-dark.css'
+import tut1 from '../../assets/tut1.png'
+import tut2 from '../../assets/tut2.png'
+import tut3 from '../../assets/tut3.png'
 
-let test = `# Depth in a 2D tile-map
-In a world built of only 2 dimensions, how can we calculate depth?
+let test = `# Depth/Elevation in a 2D tile-map
+In a tile-based game confined to 2 dimensions, how can we create a usable 3rd dimension? This would be useful for both collisions and elevation calculations under the hood, and even some crazy game mechanics where you're able to switch between a 2d and 3d view.
 
+
+A [Video](https://photos.app.goo.gl/bznoxCHyaP3uDwds9) is worth a thousand words, and in this case would better describe what I'm trying to achieve.
+
+- ![image](${tut3})
+- This first image examples a slightly more robust use-case for how we could extend our 3d data to be skinned according to the tilemap.
+- ![image](${tut1})
+- The second image examples the most basic 3d object layer that we could extract from the tilemap to use for calculations/elevations which probably wouldn't be rendered to the player. 
+
+There is one issue I've still yet to work out, which you may see from the images/video, where transitions between elevations (staircases) are proving difficult to visuallize between the two views.. if you look at the top of the stair case in both 2d/3d in the first image, it looks correctly positioned, but when you stretch it one tile down it leaves a gap at the bottom in the 2d view... it's due to the optical illusion of our 2d view, so I still need to work out some sort of fix in the design process for that, for now I've decided that the best solution would be two stretch staircases one extra tile-length towards the camera.
 ## Intro
 After playing the game Divinity Original Sin, I was highly inspired to re-create some of the mechanics myself. I'm also a big fan of 2D games made with tilemaps, so I decided to mash the two concepts together while tinkering with some mechanics. After a little dinking around, I was faced with the issue of calculating depth. In Divinity, if an archer is on higher grounds than the enemy, then the enemy recieves bonus damage based on the elevation advantage... 
 
@@ -16,10 +29,10 @@ In a level designed with this in mind, we could parse the data and build a 3-dim
 
 ## Let's get started
 
-### - Preparing the tile map
+### Preparing the tile map
 I'll use [Tiled](https://www.mapeditor.org/) to create the tilemap. A very robust tile editor, which has layers built in. To stream-line the process I'm just going to set each layer's name to an index relative to it's elevation (0 being the main elevation).
 
-### - Parsing the tilemap
+### Parsing the tilemap
 To begin building our 3D world, we will parse the tilemap... We're not going to worry about chunking, efficiency, etc... We're just worrying about building the world at this point. 
 
 For the sake of the tutorial, let's just store all of our cubes in an array/list.
@@ -54,7 +67,7 @@ for (int i = 0; i < layers.length; i++)
 
 That's it! Atleast in the most simplest form of purely cubes. 
 
-### - Next Step
+### Next Step
 You'll need special care for bridges/slopes, these tiles will need to be flagged with extra data in the tile editor:
 
 - For bridges you can modify the size of the cube to be only 1 in the axis you pick for depth (I used the z-axis), aswell as adjust it's position to be *(size * depth) + (size - 1)*  to raise it up flush with the rest of layer.
@@ -71,7 +84,7 @@ export default function Tutorial() {
   return (
 
 
-        <div className='w-full h-full'>
+        <div className='markdown-body w-full h-full p-2'>
         <Markdowner markdown={test} />
         </div>
         

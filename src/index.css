@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-4xl py-2;
   }
@@ -33,7 +33,7 @@
   li{
     @apply my-2 bg-black/25 p-2 rounded
   }
-}
+} */
 
 
 
