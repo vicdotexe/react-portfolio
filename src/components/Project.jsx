@@ -10,10 +10,8 @@ export default function Project({info}) {
           <div className='absolute md:invisible p-2 text-white w-full h-full md:group-hover:visible bg-gradient-to-b from-black via-transparent to-black'>
           </div>
           <div className='group md:invisible md:group-hover:visible absolute p-2 text-sky-400 font-bold w-full h-full text-2xl flex flex-col justify-between'>
-            <div className='flex flex-col h-full'>
-              <h1 className="bg-gradient-to-r from-sky-700 to-blue-900 rounded  text-center text-white">{title}</h1>
-              {/* <h1 className='bg-zinc-900 bg-opacity-75 p-2 rounded border border-zinc-700 grow my-2 text-zinc-100 text-sm'>{description}</h1> */}
-            </div>
+              <h1 className="bg-gradient-to-r from-sky-700 to-blue-900 rounded text-center text-white">{title}</h1>
+            <p className='bg-black/80 rounded border border-white p-2 m-2 h-full max-h-full overflow-y-auto text-sm text-white'>{description}</p>
             <div className='flex justify-between'>
               <a href={link} target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="bg-neutral-900 hover:bg-neutral-800 bg-opacity-100 p-3 rounded-full " width="50" height="50">
