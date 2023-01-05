@@ -25,7 +25,7 @@ export default function CoolStuff() {
     <div>
         {/* {renderOptions()} */}
         <div className='m-3'>
-            Eventually more of my personal coding adventures will go here, but here's a tutorial for now!
+            Eventually more of my personal coding adventures will go here, but here's a cool tutorial I made!
         </div>
         <div className='bg-black/25 p-2'>
         {/* {current && myTuts.get(current)} */}
